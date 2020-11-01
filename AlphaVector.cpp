@@ -18,6 +18,27 @@ double AlphaVector::operator[](unsigned int i){
     return this->values[i];
 };
 
+bool AlphaVector::operator==(AlphaVector & alpha){
+    if (this->action_Index == alpha.action_Index)
+    {
+        for (int i = 0; i<this->GetSize();i++){
+            if (this->values[i]!=alpha[i]){
+                return false;
+            }
+        }
+        
+    }else
+    {
+        return false;
+    }
+    return true;
+    
+};
+
+bool AlphaVector::operator!=(AlphaVector & alpha){
+    return !(*this == alpha);
+}
+
 unsigned int AlphaVector:: GetActionIndex() const {
     return this->action_Index;
 };

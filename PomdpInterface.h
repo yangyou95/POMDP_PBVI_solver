@@ -1,5 +1,5 @@
 #ifndef _POMDPINTERFACE_H_
-#define _POMDPINTERFACE_H_1
+#define _POMDPINTERFACE_H_
 
 #include <vector>
 

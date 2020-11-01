@@ -29,6 +29,8 @@ public:
     unsigned int GetSize() const;
     unsigned int GetActionIndex() const;
     double operator[](unsigned int i);
+    bool operator==(AlphaVector & alpha);
+    bool operator!=(AlphaVector & alpha);
     void ChangeValue(unsigned int sI, double v);
     void Print();
     ~AlphaVector();

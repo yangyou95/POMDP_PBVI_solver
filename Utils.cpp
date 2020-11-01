@@ -41,10 +41,6 @@ void ExpandBeliefSet(vector<Belief>& bs, vector<Belief>& temp_bs, int NrB ){
 
         if(dis> MIN_B_ACC && select_i > -1){
             bs.push_back(temp_bs[select_i]);
-            // cout << "The added belief point is : <";
-            // PrintBelief(temp_bs[select_i]);
-            // cout << ">. It's avg L1 dis from original BS is :" << dis;
-            // cout << endl;
         }
     }else
     {
@@ -87,8 +83,7 @@ double ComputeDistanceAlphas(AlphaVector& a, AlphaVector& b){
 bool CheckConvergence(vector<AlphaVector>& a_vecs, vector<AlphaVector>& b_vecs, double err){
     // Check dimension equal
     if (a_vecs.size()!=b_vecs.size()){
-        cerr << "sizes of two alpha vectors are not equal!" << endl;
-        throw("");
+        return false;
     }else{
         for (int i = 0; i<a_vecs.size();i++){
             if (ComputeDistanceAlphas(a_vecs[i], b_vecs[i]) > err){
@@ -98,3 +93,42 @@ bool CheckConvergence(vector<AlphaVector>& a_vecs, vector<AlphaVector>& b_vecs, 
     }
     return true;
 }
+
+bool CheckAlphaExist(vector<AlphaVector>& a_vecs, AlphaVector& alpha){
+    if (a_vecs.size()==0) return false;
+    for (int i = 0; i<a_vecs.size();i++){
+        if (a_vecs[i]==alpha){
+            return true;
+        }
+    }
+    return false;
+}
+
+void PrintBeliefSet(vector<Belief>& bs){
+    for (int i = 0;i <bs.size();i++){
+        bs[i].PrintBelief();
+    }
+}
+
+void PrintAlphaVectors(vector<AlphaVector>& a_vecs){
+    for (int i = 0; i <a_vecs.size(); i++){
+        a_vecs[i].Print();
+    }
+};
+
+void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector>>>& a_ao_vecs){
+    // For all the action index in alpha_a_b
+    for (unsigned int aI = 0; aI<a_ao_vecs.size();aI++){
+        // cout << " ---- aI:"<<aI;
+        // For all the oI 
+        for (unsigned int oI = 0; oI<a_ao_vecs[aI].size();oI++){
+            // cout << ", oI:"<<oI <<" ---- " << endl;
+            // For all alpha idx
+            for (int idx = 0; idx<a_ao_vecs[aI][oI].size();idx++){
+                cout << " ---- aI:"<<aI <<", oI:"<<oI  << ", alpha_idx:"<<idx << " -----" << endl;
+                a_ao_vecs[aI][oI][idx].Print();
+            }
+        }
+    }
+};
+

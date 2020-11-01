@@ -28,5 +28,8 @@ void ExpandBeliefSet(vector<Belief>& bs, vector<Belief>& temp_bs, int NrB );
 double dot(Belief& b, AlphaVector& alpha);
 double ComputeDistanceAlphas(AlphaVector& a, AlphaVector& b);
 bool CheckConvergence(vector<AlphaVector>& a_vecs, vector<AlphaVector>& b_vecs, double err);
-
+bool CheckAlphaExist(vector<AlphaVector>& a_vecs, AlphaVector& alpha);
+void PrintBeliefSet(vector<Belief>& bs);
+void PrintAlphaVectors(vector<AlphaVector>& a_vecs);
+void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector>>>& a_ao_vecs);
 #endif /* !_UTILS_H_ */

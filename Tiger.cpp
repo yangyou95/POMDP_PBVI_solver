@@ -83,9 +83,6 @@ double TigerPb::Reward(int sI, int aI){
         throw "Wrong input state index for RewardFunc!";
     }
     
-
-
-    
 };
 
 TigerPb::TigerPb(/* args */)
