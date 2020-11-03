@@ -40,6 +40,9 @@ sh cleanCMAKE.sh
 ## Modify the planning parameters
 You can change the global iteration max number, improving iteration max number, err and max belief points number setting in the solver program. This wil be soon changed to give parameters when execute the program.
 
+## Current Problem Setting
+Currently, only Tiger Problem is implemented with cpp, so when you launch the program, you will see the output alpha-vectors of the Tiger Problem.
+
 ## Create New Problems
 
 Currently the POMDP problem is defined by cpp. To create a new problem, you need to extend the Model interface (Include/PomdpInterface.h). The following functions are needed to be customized:
