@@ -38,7 +38,7 @@ sh cleanCMAKE.sh
 ```
 
 ## Modify the planning parameters
-You can change the value setting in the solver program. This wil be soon changed to give parameters when execute the program.
+You can change the global iteration max number, improving iteration max number, err and max belief points number setting in the solver program. This wil be soon changed to give parameters when execute the program.
 
 ## Create New Problems
 
