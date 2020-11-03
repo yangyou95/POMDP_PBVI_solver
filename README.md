@@ -37,6 +37,9 @@ A cleaning shell is written for cleaning the CMake compiling generated files, ju
 sh cleanCMAKE.sh
 ```
 
+## Modify the planning parameters
+You can change the value setting in the solver program. This wil be soon changed to give parameters when execute the program.
+
 ## Create New Problems
 
 Currently the POMDP problem is defined by cpp. To create a new problem, you need to extend the Model interface (Include/PomdpInterface.h). The following functions are needed to be customized:
@@ -50,8 +53,8 @@ Currently the POMDP problem is defined by cpp. To create a new problem, you need
 * double Reward(int sI, int aI)=0.
 
 ## Future Improvement
-* Writing a parser to parse .POMDP, POMDPX or PGMX files
-* Planner can be optimized by multi-threads
+* A parser to parse .POMDP, POMDPX or PGMX files
+* The planner can be optimized by multi-threads
 
 ## Refs
 
