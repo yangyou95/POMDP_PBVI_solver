@@ -51,7 +51,7 @@ Currently the POMDP problem is defined by cpp. To create a new problem, you need
 
 
 
-## Ref
+## Refs
 
 > [1]. Joelle Pineau, Geoff Gordon, and Sebastian Thrun. 2003. Point-based value iteration: an anytime algorithm for POMDPs. In <i>Proceedings of the 18th international joint conference on Artificial intelligence</i> (<i>IJCAI'03</i>). Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1025–1030.
 
