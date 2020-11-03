@@ -39,9 +39,9 @@ public:
     vector<Belief> Expand(vector<Belief>& BS, int MAX_BP, PomdpInterface* Pb);
     AlphaVector UpdateAlphaAO(unsigned int aI, AlphaVector alpha, unsigned oI, PomdpInterface* Pb);
     vector<vector <double> > BuildRewardVectors(PomdpInterface* Pb);
-    vector< vector<vector<AlphaVector>>> ComputeAllAlphaAOValues(vector<AlphaVector>& alpha_vecs, PomdpInterface* Pb);
-    AlphaVector UpdateAlphaAB(unsigned int aI, vector< vector<vector<AlphaVector>>>& AlphaAOVecs, Belief& b,  vector<vector <double> >& RewardVecs, double gamma, PomdpInterface* Pb);
-    AlphaVector backup(vector<AlphaVector>& alpha_vecs, Belief& b,vector< vector<vector<AlphaVector>>>& AlphaAOVecs, vector<vector <double> >& RewardVecs, double gamma, PomdpInterface* Pb);
+    vector< vector<vector<AlphaVector> > > ComputeAllAlphaAOValues(vector<AlphaVector>& alpha_vecs, PomdpInterface* Pb);
+    AlphaVector UpdateAlphaAB(unsigned int aI, vector< vector<vector<AlphaVector> > >& AlphaAOVecs, Belief& b,  vector<vector <double> >& RewardVecs, double gamma, PomdpInterface* Pb);
+    AlphaVector backup(vector<AlphaVector>& alpha_vecs, Belief& b,vector< vector<vector<AlphaVector> > >& AlphaAOVecs, vector<vector <double> >& RewardVecs, double gamma, PomdpInterface* Pb);
     void Improve(vector<AlphaVector>& alpha_vecs,vector<Belief>& BPS,vector<vector <double> >& RewardVecs, double gamma, int MAX_ITER_IMP ,PomdpInterface* Pb);
     void PrintRewardVecs(vector<vector <double> > & RVecs, PomdpInterface* Pb);
     void Plan(vector<AlphaVector>& alpha_vecs,vector<Belief>& BPS, int MAX_BP,vector<vector <double> >& RewardVecs, double gamma, int MAX_ITER_G, int MAX_ITER_I, double err ,PomdpInterface* Pb);

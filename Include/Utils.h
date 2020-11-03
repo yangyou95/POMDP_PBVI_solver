@@ -14,8 +14,8 @@
 
 #include <iostream>
 #include <vector>
-#include "Belief.h"
-#include "AlphaVector.h"
+#include "../Include/Belief.h"
+#include "../Include/AlphaVector.h"
 using namespace std;
 
 #define MIN_B_ACC 1e-3
@@ -31,5 +31,5 @@ bool CheckConvergence(vector<AlphaVector>& a_vecs, vector<AlphaVector>& b_vecs, 
 bool CheckAlphaExist(vector<AlphaVector>& a_vecs, AlphaVector& alpha);
 void PrintBeliefSet(vector<Belief>& bs);
 void PrintAlphaVectors(vector<AlphaVector>& a_vecs);
-void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector>>>& a_ao_vecs);
+void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector> > >& a_ao_vecs);
 #endif /* !_UTILS_H_ */

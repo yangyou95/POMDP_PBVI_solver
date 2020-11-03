@@ -1,4 +1,4 @@
-#include "Belief.h"
+#include "../Include/Belief.h"
 
 Belief::Belief(const std::vector<double> b)
 {

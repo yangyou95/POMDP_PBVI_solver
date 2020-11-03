@@ -18,7 +18,7 @@ private:
     int S_size = 2; // TLeft, Right 
     int A_size = 3; // Left, Right, Listen
     int Obs_size = 2; // HTLeft, HTRight
-    std::vector<double> b0{0.5,0.5};
+    std::vector<double> b0 {0.5,0.5};
 public:
     TigerPb(/* args */);
     ~TigerPb();

@@ -1,4 +1,4 @@
-#include "AlphaVector.h"
+#include "../Include/AlphaVector.h"
 
 AlphaVector::AlphaVector(std::vector<double> V, const unsigned int aI)
 {

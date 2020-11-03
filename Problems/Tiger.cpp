@@ -1,4 +1,4 @@
-#include "Tiger.h"
+#include "../Include/Tiger.h"
 
 double TigerPb::TransFunc(int sI, int aI, int s_newI){
     if (sI< this->Obs_size){
