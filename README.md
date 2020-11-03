@@ -49,7 +49,9 @@ Currently the POMDP problem is defined by cpp. To create a new problem, you need
 * double ObsFunc(int oI, int s_newI, int aI)=0;
 * double Reward(int sI, int aI)=0.
 
-
+## Future Improvement
+* Writing a parser to parse .POMDP, POMDPX or PGMX files
+* Planner can be optimized by multi-threads
 
 ## Refs
 
