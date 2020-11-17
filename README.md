@@ -7,7 +7,7 @@ POMDP PBVI Solver is an C++ implementation of the Point Based Value Iteration al
 
 ## Installation
 
-Test tested systems:
+Tested systems:
 
 * Linux
 * Mac OS X
