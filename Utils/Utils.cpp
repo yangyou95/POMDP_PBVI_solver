@@ -1,5 +1,5 @@
 #include "../Include/Utils.h"
-
+#include <cmath>
 
 // For state and action index, unsigned int
 // For belief point index, unsigned long
@@ -14,7 +14,7 @@ double ComputeAvgL1Distance(Belief& b,vector<Belief>& bs, int NrB){
         vector<double> b_temp = bs[i].GetBelief();
         double temp_sum = 0;
         for (unsigned int j=0;j<b_value.size();j++){
-            temp_sum += abs(b_value[j] - b_temp[j]);
+            temp_sum += abs(double(b_value[j] - b_temp[j]));
         }
         // If temp_sum is 0, it means b already in bs, return = 0 directly
         if (temp_sum< MIN_B_ACC) return 0;
@@ -132,3 +132,32 @@ void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector>>>& a_ao_vecs){
     }
 };
 
+int argmax_alpha(vector<AlphaVector> alpha_vecs, Belief b){
+    cout << " ------ Current Belief ---------"<<endl;
+    b.PrintBelief();
+    double v_max = -__DBL_MAX__;
+    int maxI = 0;
+    for (size_t i = 0; i < alpha_vecs.size(); i++)
+    {
+        cout << "------------"<<endl;
+        cout << "This alpha vector is " ;
+        alpha_vecs[i].Print();
+        cout << endl;
+
+        double value = 0;
+        for (size_t sI = 0; sI < alpha_vecs[i].GetSize(); sI++)
+        {
+            value += alpha_vecs[i][sI]*b[sI];
+        }
+        cout << "The value at current belief is:" << value << endl;
+        if (value > v_max)
+        {
+            v_max = value;
+            maxI = i;
+        }
+        
+        
+    }
+    return maxI;
+    
+}

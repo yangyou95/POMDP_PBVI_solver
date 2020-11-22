@@ -32,4 +32,6 @@ bool CheckAlphaExist(vector<AlphaVector>& a_vecs, AlphaVector& alpha);
 void PrintBeliefSet(vector<Belief>& bs);
 void PrintAlphaVectors(vector<AlphaVector>& a_vecs);
 void PrintAllAlphaAOVecs(vector< vector<vector<AlphaVector> > >& a_ao_vecs);
+int argmax_alpha(vector<AlphaVector> alpha_vecs, Belief b);
+
 #endif /* !_UTILS_H_ */
