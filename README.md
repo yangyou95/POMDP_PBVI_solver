@@ -27,8 +27,10 @@ make
 
 
 
-The executable file is will be generated called "PBVI".  
-
+The executable file is will be generated called "PBVI", to run the program, just type:
+```
+./PBVI your_file_path
+```
 
 
 A cleaning shell is written for cleaning the CMake compiling generated files, just run：
@@ -40,12 +42,14 @@ sh cleanCMAKE.sh
 ## Modify the planning parameters
 You can change the global iteration max number, improving iteration max number, err and max belief points number setting in the solver program. This wil be soon changed to give parameters when execute the program.
 
-## Current Problem Setting
-Currently, only Tiger Problem is implemented with cpp, so when you launch the program, you will see the output alpha-vectors of the Tiger Problem.
+## Current Parser
+Right now the parser is able to parser .pomdp(.POMDP) files. There is a detailed explaination for this format http://www.pomdp.org/code/pomdp-file-spec.html .
 
-## Create New Problems
+You can also create POMDPs in Cpp codes, in the Problem folder, an example TigerProblem cpp file is provided.
 
-Currently the POMDP problem is defined by cpp. To create a new problem, you need to extend the Model interface (Include/PomdpInterface.h). The following functions are needed to be customized:
+### Create New Problems in Cpp
+
+To create a new problem in C++, you need to extend the Model interface (Include/PomdpInterface.h). The following functions are needed to be customized:
 
 * int GetSizeOfS();
 * int GetSizeOfA();
@@ -56,8 +60,8 @@ Currently the POMDP problem is defined by cpp. To create a new problem, you need
 * double Reward(int sI, int aI).
 
 ## Future Improvement
-* A parser to parse .POMDP, POMDPX or PGMX files
-* The planner can be optimized by multi-threads
+* Parsing PGMX files
+* Optimizing performance by multi-threads
 
 ## Refs
 
