@@ -43,7 +43,7 @@ sh cleanCMAKE.sh
 You can change the global iteration max number, improving iteration max number, err and max belief points number setting in the solver program. This wil be soon changed to give parameters when execute the program.
 
 ## Current Parser
-Right now the parser is able to parser .pomdp(.POMDP) files. There is a detailed explaination for this format http://www.pomdp.org/code/pomdp-file-spec.html .
+Right now the parser is able to parse .pomdp(.POMDP) files. There is a detailed explaination for this format http://www.pomdp.org/code/pomdp-file-spec.html .
 
 You can also create POMDPs in Cpp codes, in the Problem folder, an example TigerProblem cpp file is provided.
 
