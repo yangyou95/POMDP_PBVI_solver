@@ -3,7 +3,7 @@ POMDP PBVI Solver
 
 POMDP PBVI Solver 是C++实现的 **Point Based Value Iteration** 算法[1].  PBVI是一种**offline**算法，其求解的是决策Horizon趋近于Infinite情况下，收敛得到的Value Function，以**Alpha-Vectors**的形式输出。PBVI的中文讲解 https://zhuanlan.zhihu.com/p/272867881 。
 
-POMDP PBVI Solver is an C++ implementation of the Point Based Value Iteration algorithm [1]. PBVI is an offline algorithm. It aims to resolve the problem at infinite horizons. The result is the converged value function which is represented by the alpha-vectors.
+POMDP PBVI Solver is a C++ implementation of the Point Based Value Iteration algorithm [1]. PBVI is an offline algorithm. It aims to solve POMDP problems at infinite horizons. The result is the converged value function which is represented by the alpha-vectors.
 
 ## Installation
 
